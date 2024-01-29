@@ -5,6 +5,7 @@ namespace backend\controllers;
 use common\models\CustomerEmployee;
 use common\models\BookInventory;
 use common\models\search\CustomerEmployeeSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -30,6 +31,17 @@ class CustomerEmployeeController extends Controller
                     'actions' => [
                         'delete' => ['POST'],
                     ],
+                ],
+                'access' => [
+                    'class' => AccessControl::class,
+                    'rules' => [
+                        [
+                            'actions' => ['create', 'update', 'delete', 'index', 'view', 'debt'],
+                            'allow' => true,
+                            'roles' => ['@'],
+                        ],
+                    ],
+
                 ],
             ]
         );

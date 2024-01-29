@@ -6,7 +6,7 @@ use common\components\CurlComponent;
 use yii\base\BaseObject;
 use Yii;
 
-class SaveFromApiStudent extends BaseObject implements \yii\queue\Job
+class SaveFromApiEmployee extends BaseObject implements \yii\queue\Job
 {
     public $chunk;
 

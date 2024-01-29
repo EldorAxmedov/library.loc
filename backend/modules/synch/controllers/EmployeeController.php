@@ -3,7 +3,6 @@
 namespace backend\modules\synch\controllers;
 
 use yii\web\Controller;
-use backend\jobs\SaveFromApiEmployee;
 use common\models\Employee;
 use common\components\CurlComponent;
 use yii\filters\VerbFilter;
